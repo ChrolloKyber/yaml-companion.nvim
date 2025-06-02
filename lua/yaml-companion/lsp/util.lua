@@ -5,7 +5,7 @@ local log = require("yaml-companion.log")
 local sync_timeout = 5000
 
 ---@param bufnr number
----@return vim.lsp.client | nil
+---@return vim.lsp.Client | nil
 M.get_client = function(bufnr)
   return vim.lsp.get_clients({ name = "yamlls", bufnr = bufnr })[1]
 end
